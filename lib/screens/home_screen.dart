@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tesla_car_animation/controller/home_controller.dart';
+import 'package:tesla_car_animation/widgets/app_bottom_navigation.dart';
 import 'package:tesla_car_animation/widgets/door_lock.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +20,10 @@ class _HomeScreenState extends State<HomeScreen> {
         animation: _controller,
         builder: (context, _) {
           return Scaffold(
+            bottomNavigationBar: AppBottomNavigation(
+              onTap: (val) {},
+              selectedTab: 0,
+            ),
             body: SafeArea(
               child: LayoutBuilder(
                 builder: (context, constraints) {
